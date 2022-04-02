@@ -120,6 +120,7 @@ const FeaturedWorkButton = styled.a<{
   font-size: 18px;
   line-height: 28px;
   color: #ffffff;
+  text-decoration: none;
   ${(props) => props.isPrototype && `margin-left: 40px;`}
   ${(props) => props.mobile && `display: none;`}
 
