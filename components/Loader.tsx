@@ -23,6 +23,14 @@ export const LoaderContainer = styled.main`
       margin-top: 23px;
     }
   }
+
+  @media (max-width: 768px) {
+    section p {
+      font-size: 13.4894px;
+      line-height: 21px;
+      margin-top: 15.51px;
+    }
+  }
 `;
 
 export const CirclesContainer = styled.div`
@@ -56,6 +64,23 @@ export const TitleRing = styled.div<{ lightBg: string; darkBg: string }>`
   &:first-child {
     margin-right: 21px;
   }
+
+  @media (max-width: 768px) {
+    width: 53.96px;
+    height: 53.96px;
+    margin-bottom: 26.98px;
+
+    div {
+      width: 33.72px;
+      height: 33.72px;
+      font-size: 15.8918px;
+      line-height: 25px;
+    }
+
+    &:first-child {
+      margin-right: 14.16px;
+    }
+  }
 `;
 
 export const LinearLoader = styled.div<{ progress: number }>`
@@ -83,6 +108,12 @@ export const LinearLoader = styled.div<{ progress: number }>`
     top: 0;
     background: #6b37ff;
   }
+
+  @media (max-width: 768px) {
+    height: 11.47px;
+    font-size: 8.09362px;
+    line-height: 13px;
+  }
 `;
 
 export const Loader = () => {
@@ -93,7 +124,7 @@ export const Loader = () => {
     const load = setTimeout(() => {
       setProgress((progress) => progress + 1);
       return () => clearTimeout(load);
-    }, 50);
+    }, 30);
   }, [progress]);
   return (
     <LoaderContainer>

@@ -61,7 +61,7 @@ export default class MyDocument extends Document<any> {
             type="image/x-icon"
           />
 
-          <meta property="og:url" content="https://codelord.vercel.app" />
+          <meta property="og:url" content="https://abdulqadir.vercel.app" />
           <meta
             name="description"
             content="Hi, there! I’m Abdulqadir Adebayo, a UI/UX Designer from Nigeria. I have 2years of experience working as a UI/UX Designer within and outside of my country. I help small and large scale businesses solve their problems by building User centred products and trouble shooting UX Problems, which in turn increases their profit/revenue."

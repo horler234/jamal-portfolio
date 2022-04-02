@@ -642,7 +642,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 7000);
+    }, 4700);
   }, []);
 
   if (isLoading) return <Loader />;
