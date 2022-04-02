@@ -158,12 +158,12 @@ export const FeaturedWork = ({
       <p>{desc}</p>
 
       <WorkContentFlex>
-        <Link href={caseLink}>
+        <Link href={caseLink} passHref>
           <FeaturedWorkButton bg={caseBg}>Read Case Study</FeaturedWorkButton>
         </Link>
 
         {protoLink && (
-          <Link href={protoLink}>
+          <Link href={protoLink} passHref>
             <FeaturedWorkButton isPrototype bg="#1D133B">
               <PlayImageContainer>
                 <Image
@@ -185,14 +185,14 @@ export const FeaturedWork = ({
     </WorkImage>
 
     <WorkContentFlex>
-      <Link href={caseLink}>
+      <Link href={caseLink} passHref>
         <FeaturedWorkButton mobile bg={caseBg}>
           Read Case Study
         </FeaturedWorkButton>
       </Link>
 
       {protoLink && (
-        <Link href={protoLink}>
+        <Link href={protoLink} passHref>
           <FeaturedWorkButton mobile isPrototype bg="#1D133B">
             <PlayImageContainer>
               <Image

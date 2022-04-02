@@ -792,11 +792,11 @@ const Home: NextPage = () => {
           UX Problems, which in turn increases their profit/revenue.
         </p>
         <div>
-          <Link href="/">
+          <Link href="/" passHref>
             <GreenButton>Hire me</GreenButton>
           </Link>
 
-          <Link href="/">
+          <Link href="/" passHref>
             <TransparentButton>View CV</TransparentButton>
           </Link>
         </div>
@@ -860,7 +860,7 @@ const Home: NextPage = () => {
           />
 
           <DisplayAtMedia custom="(max-width: 1100px)">
-            <Link href="/">
+            <Link href="/" passHref>
               <GreenButton>View CV</GreenButton>
             </Link>
           </DisplayAtMedia>
@@ -870,14 +870,14 @@ const Home: NextPage = () => {
           <h1>About me</h1>
 
           <p>
-            Over the last two years, I've been growing and honing my skills as a
-            UI/UX Designer with experience in designing and building products in
-            different sectors which serve as a solution to various public
-            problems.
+            Over the last two years, I&apos;ve been growing and honing my skills
+            as a UI/UX Designer with experience in designing and building
+            products in different sectors which serve as a solution to various
+            public problems.
             <br />
             <br />
-            I've worked with diverse teams, from different countries, which has
-            enabled me gain a wide range of experience and also increased my
+            I&apos;ve worked with diverse teams, from different countries, which
+            has enabled me gain a wide range of experience and also increased my
             ability to work well with teams.
             <br />
             <br />
@@ -885,7 +885,7 @@ const Home: NextPage = () => {
           </p>
 
           <DisplayAtMedia custom="(min-width: 1101px)">
-            <Link href="/">
+            <Link href="/" passHref>
               <GreenButton>View CV</GreenButton>
             </Link>
           </DisplayAtMedia>

@@ -64,24 +64,24 @@ export default class MyDocument extends Document<any> {
           <meta property="og:url" content="https://codelord.vercel.app" />
           <meta
             name="description"
-            content="Abdulmuqit is a self-taught front-end developer from Lagos, Nigeria. Currently, he is an undergraduate student at the University of Lagos, Akoka where he is studying Civil & Environmental Engineering."
+            content="Hi, there! I’m Abdulqadir Adebayo, a UI/UX Designer from Nigeria. I have 2years of experience working as a UI/UX Designer within and outside of my country. I help small and large scale businesses solve their problems by building User centred products and trouble shooting UX Problems, which in turn increases their profit/revenue."
           />
 
           <meta
             name="og:description"
-            content="Abdulmuqit is a self-taught front-end developer from Lagos, Nigeria. Currently, he is an undergraduate student at the University of Lagos, Akoka where he is studying Civil & Environmental Engineering."
+            content="Hi, there! I’m Abdulqadir Adebayo, a UI/UX Designer from Nigeria. I have 2years of experience working as a UI/UX Designer within and outside of my country. I help small and large scale businesses solve their problems by building User centred products and trouble shooting UX Problems, which in turn increases their profit/revenue."
           />
-          <meta name="og:image" content="/images/me.JPG" />
-          <meta property="og:site_name" content="Abdulmuqit Shuaib" />
-          <meta name="theme-color" content="#0F0D0D" />
+          <meta name="og:image" content="/images/abdulqadir.png" />
+          <meta property="og:site_name" content="Abdulqadir Adebayo" />
+          <meta name="theme-color" content="#11003e" />
           {/* twitter card */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Abdulmuqit Shuaib" />
+          <meta name="twitter:title" content="Abdulqadir Adebayo" />
           <meta
             name="twitter:description"
-            content="Abdulmuqit is a self-taught front-end developer from Lagos, Nigeria. Currently, he is an undergraduate student at the University of Lagos, Akoka where he is studying Civil & Environmental Engineering."
+            content="Hi, there! I’m Abdulqadir Adebayo, a UI/UX Designer from Nigeria. I have 2years of experience working as a UI/UX Designer within and outside of my country. I help small and large scale businesses solve their problems by building User centred products and trouble shooting UX Problems, which in turn increases their profit/revenue."
           />
-          <meta name="twitter:image" content="/images/me.JPG" />
+          <meta name="twitter:image" content="/images/abdulqadir.png" />
           {this.props.styleTags}
         </Head>
         <body>
