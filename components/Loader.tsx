@@ -95,7 +95,7 @@ export const LinearLoader = styled.div<{ progress: number }>`
   height: 17px;
   background: #a99ad2;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 19px;
   text-align: center;
   display: flex;

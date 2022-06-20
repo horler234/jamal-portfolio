@@ -12,7 +12,7 @@ export const SectionSubHeaderText = styled.p<{ mt?: number }>`
   ${(props) => props.mt && `margin-top: ${props.mt}px;`}
 
   @media (max-width: ${(props) => props.theme.media.mediaSizesString.tablet}) {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     margin-top: 11px;
   }

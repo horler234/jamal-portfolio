@@ -10,7 +10,7 @@ export const ContactInfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 100px 0 72px;
+  margin-bottom: 72px;
   width: 100%;
 
   div {

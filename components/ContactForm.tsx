@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const ContactFormContainer = styled.form`
   margin-top: 80px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -63,14 +64,13 @@ const ContactFormContainer = styled.form`
     margin-top: 24px;
 
     input {
-      font-size: 12px;
-      line-height: 19px;
+      font-size: 16px;
       height: 50px;
     }
 
     textarea {
       margin-top: 17px;
-      font-size: 12px;
+      font-size: 16px;
       line-height: 19px;
       height: 103px;
     }

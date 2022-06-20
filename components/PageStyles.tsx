@@ -319,7 +319,7 @@ export const AboutSectionContainer = styled(WorksContainer)`
 
       p {
         margin-bottom: 40px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 19px;
       }
     }
@@ -384,7 +384,7 @@ export const MobileNavigation = styled.div`
   justify-content: space-between;
   flex-direction: column;
   padding: 0 30px;
-  padding-top: 180px;
+  padding-top: 100px;
   display: none;
   align-items: center;
 

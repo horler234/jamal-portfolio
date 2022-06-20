@@ -128,9 +128,10 @@ const WorkContentContainer = styled.div<{ iconBg?: string }>`
     }
 
     p {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 19px;
-      margin: 9px 0 0;
+      width: 70%;
+      margin: 9px auto 0;
     }
   }
 `;
