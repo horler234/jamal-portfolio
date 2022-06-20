@@ -1,3 +1,4 @@
+import { Bounce, SecondBounce } from "keyframes/Bounce";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -47,6 +48,11 @@ export const TitleRing = styled.div<{ lightBg: string; darkBg: string }>`
   align-items: center;
   background: ${(props) => props.lightBg};
   margin-bottom: 40px;
+  animation: ${Bounce} 2.5s ease infinite;
+
+  &:last-child {
+    animation-name: ${SecondBounce};
+  }
 
   div {
     width: 50px;

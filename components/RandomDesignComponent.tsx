@@ -2,6 +2,9 @@ import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
 import { RandomDesign } from "@type/RandomDesign";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const RandomDesignContainer = styled.div`
   width: 100%;
@@ -38,6 +41,13 @@ const RandomDesignContainer = styled.div`
     align-items: center;
     text-decoration: none;
     margin-top: 50px;
+    background: linear-gradient(to left, transparent 50%, #6b37ff 50%) right;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+
+    &:hover {
+      background-position: left;
+    }
   }
 
   @media (max-width: 1010px) {
@@ -57,15 +67,54 @@ const RandomDesignContainer = styled.div`
   }
 `;
 
-export const RandomDesignComponent = ({ imgSrc, desc, href }: RandomDesign) => (
-  <RandomDesignContainer>
-    <div>
-      <Image src={imgSrc} layout="fill" alt="Random Design" />
-    </div>
+interface IRandomDesignComponent extends RandomDesign {
+  index: number;
+}
 
-    <p>{desc}</p>
-    <Link href={href}>
-      <a>View Design</a>
-    </Link>
-  </RandomDesignContainer>
-);
+export const RandomDesignComponent = ({
+  imgSrc,
+  desc,
+  href,
+  index,
+}: IRandomDesignComponent) => {
+  const control = useAnimation();
+  const [ref, inView, entry] = useInView();
+
+  useEffect(() => {
+    //@ts-ignore
+    if (entry?.boundingClientRect?.y > 0) {
+      if (entry?.isIntersecting) {
+        control.start("visible");
+      } else {
+        control.start("hidden");
+      }
+    }
+  }, [control, inView]);
+  return (
+    <motion.div
+      ref={ref}
+      style={{ width: "100%", maxWidth: "302px" }}
+      variants={{
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.7, delay: index * 0.1 },
+        },
+        hidden: { opacity: 0, y: 200 },
+      }}
+      initial="hidden"
+      animate={control}
+    >
+      <RandomDesignContainer>
+        <div>
+          <Image src={imgSrc} layout="fill" alt="Random Design" />
+        </div>
+
+        <p>{desc}</p>
+        <Link href={href}>
+          <a>View Design</a>
+        </Link>
+      </RandomDesignContainer>
+    </motion.div>
+  );
+};
