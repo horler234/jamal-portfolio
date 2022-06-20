@@ -290,7 +290,7 @@ const Home: NextPage = () => {
                 transition={{ type: "spring", delay: 0.3 }}
               >
                 <TransparentButton
-                  href="https://docs.google.com/document/d/1M5BoHHzqdKMfQheoMs6QpfY7dDF-MnSi/edit?usp=drivesdk&ouid=106240438463745738776&rtpof=true&sd=true"
+                  href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -371,7 +371,7 @@ const Home: NextPage = () => {
 
                 <DisplayAtMedia custom="(max-width: 1100px)">
                   <GreenButton
-                    href="https://docs.google.com/document/d/1M5BoHHzqdKMfQheoMs6QpfY7dDF-MnSi/edit?usp=drivesdk&ouid=106240438463745738776&rtpof=true&sd=true"
+                    href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -407,7 +407,7 @@ const Home: NextPage = () => {
 
               <DisplayAtMedia custom="(min-width: 1101px)">
                 <GreenButton
-                  href="https://docs.google.com/document/d/1M5BoHHzqdKMfQheoMs6QpfY7dDF-MnSi/edit?usp=drivesdk&ouid=106240438463745738776&rtpof=true&sd=true"
+                  href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
