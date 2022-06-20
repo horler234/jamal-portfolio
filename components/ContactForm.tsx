@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useForm } from "@formcarry/react";
 
 const ContactFormContainer = styled.form`
   margin-top: 80px;
@@ -81,6 +82,14 @@ const ContactFormContainer = styled.form`
   }
 `;
 
+export const SubmittedContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 284px;
+`;
+
 const variant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   hidden: { opacity: 0, scale: 0 },
@@ -89,6 +98,10 @@ const variant = {
 export const ContactForm = () => {
   const control = useAnimation();
   const [ref, inView, entry] = useInView();
+
+  const { state, submit } = useForm({
+    id: "TOiO7rR9DPC",
+  });
 
   useEffect(() => {
     //@ts-ignore
@@ -100,12 +113,17 @@ export const ContactForm = () => {
       }
     }
   }, [control, inView]);
+
+  if (state.submitted) {
+    return <SubmittedContainer>Thanks for the feedback!</SubmittedContainer>;
+  }
+
   return (
     <motion.div ref={ref} variants={variant} initial="hidden" animate={control}>
-      <ContactFormContainer>
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Email" />
-        <textarea placeholder="Message" />
+      <ContactFormContainer onSubmit={submit}>
+        <input type="text" placeholder="Name" id="name" name="name" />
+        <input type="text" placeholder="Email" id="email" name="email" />
+        <textarea placeholder="Message" id="message" name="message" />
         <button>Send</button>
       </ContactFormContainer>
     </motion.div>

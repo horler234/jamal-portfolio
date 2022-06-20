@@ -154,26 +154,31 @@ export const ContactInfo = () => {
         initial="rightHidden"
         animate={rightControl}
       >
-        <Link href="/">
-          <a>
-            <Image
-              src="/images/behance.png"
-              alt="Behance"
-              width={35}
-              height={35}
-            />
-          </a>
-        </Link>
-        <Link href="/">
-          <a>
-            <Image
-              src="/images/linkedin.png"
-              alt="Linkedin"
-              width={35}
-              height={35}
-            />
-          </a>
-        </Link>
+        <a
+          href="https://www.behance.net/adebayoabujamal"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/images/behance.png"
+            alt="Behance"
+            width={35}
+            height={35}
+          />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/abdulqadir-adebayo-196797184"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/images/linkedin.png"
+            alt="Linkedin"
+            width={35}
+            height={35}
+          />
+        </a>
       </motion.div>
     </ContactInfoContainer>
   );

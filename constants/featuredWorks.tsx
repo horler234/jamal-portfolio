@@ -14,7 +14,8 @@ export const featuredWorks: Work[] = [
     imgWidth: 407.89,
     imgHeight: 412,
     caseLink: "/",
-    protoLink: "/",
+    protoLink:
+      "https://drive.google.com/file/d/1Lj0wex8iHPI8PoodByUHwozPuaaGEHV3/view?usp=drivesdk",
   },
 
   {
@@ -24,7 +25,7 @@ export const featuredWorks: Work[] = [
     imgSrc: "/images/e-blood.png",
     imgWidth: 391,
     imgHeight: 398.57,
-    caseLink: "/",
+    caseLink: "https://www.behance.net/gallery/137583667/E-blood-case-study",
     iconBg: "#64529A",
     caseBg: "#A51111",
   },
@@ -35,7 +36,8 @@ export const featuredWorks: Work[] = [
     imgSrc: "/images/charity-co.png",
     imgWidth: 540.11,
     imgHeight: 290,
-    caseLink: "/",
+    caseLink:
+      "https://www.behance.net/gallery/138193135/Charityco-UX-Case-study",
     caseBg: "#06194E",
     iconBg: "#AA9386",
   },

@@ -130,7 +130,7 @@ const WorkContentContainer = styled.div<{ iconBg?: string }>`
     p {
       font-size: 14px;
       line-height: 19px;
-      width: 70%;
+      width: 73%;
       margin: 9px auto 0;
     }
   }
@@ -164,11 +164,11 @@ const FeaturedWorkButton = styled.a<{
   line-height: 28px;
   color: #ffffff;
   text-decoration: none;
-  ${(props) => props.isPrototype && `margin-left: 40px;`}
+  ${(props) => props.isPrototype && `margin-right: 40px;`}
   ${(props) => props.mobile && `display: none;`}
 
   @media (max-width: 1030px) {
-    ${(props) => props.isPrototype && `margin-left: 0; margin-top: 20px;`}
+    ${(props) => props.isPrototype && `margin-right: 0; margin-bottom: 20px;`}
     display: ${(props) => (props.mobile ? "flex" : "none")};
   }
 `;
@@ -256,27 +256,34 @@ export const FeaturedWork = ({
           <p>{desc}</p>
 
           <WorkContentFlex>
-            <Link href={caseLink} passHref>
-              <FeaturedWorkButton bg={caseBg}>
-                Read Case Study
-              </FeaturedWorkButton>
-            </Link>
-
             {protoLink && (
-              <Link href={protoLink} passHref>
-                <FeaturedWorkButton isPrototype bg="#1D133B">
-                  <PlayImageContainer>
-                    <Image
-                      src="/images/play-icon.png"
-                      width={36}
-                      height={36}
-                      alt="Play Prototype"
-                    />
-                  </PlayImageContainer>
-                  Watch Prototype
-                </FeaturedWorkButton>
-              </Link>
+              <FeaturedWorkButton
+                isPrototype
+                bg="#1D133B"
+                href={protoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PlayImageContainer>
+                  <Image
+                    src="/images/play-icon.png"
+                    width={36}
+                    height={36}
+                    alt="Play Prototype"
+                  />
+                </PlayImageContainer>
+                Watch Prototype
+              </FeaturedWorkButton>
             )}
+
+            <FeaturedWorkButton
+              bg={caseBg}
+              href={caseLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read Case Study
+            </FeaturedWorkButton>
           </WorkContentFlex>
         </WorkContentContainer>
       </motion.div>
@@ -301,27 +308,36 @@ export const FeaturedWork = ({
           animate={buttonControl}
         >
           <WorkContentFlex>
-            <Link href={caseLink} passHref>
-              <FeaturedWorkButton mobile bg={caseBg}>
-                Read Case Study
-              </FeaturedWorkButton>
-            </Link>
-
             {protoLink && (
-              <Link href={protoLink} passHref>
-                <FeaturedWorkButton mobile isPrototype bg="#1D133B">
-                  <PlayImageContainer>
-                    <Image
-                      src="/images/play-icon.png"
-                      width={36}
-                      height={36}
-                      alt="Play Prototype"
-                    />
-                  </PlayImageContainer>
-                  Watch Prototype
-                </FeaturedWorkButton>
-              </Link>
+              <FeaturedWorkButton
+                mobile
+                isPrototype
+                bg="#1D133B"
+                href={protoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PlayImageContainer>
+                  <Image
+                    src="/images/play-icon.png"
+                    width={36}
+                    height={36}
+                    alt="Play Prototype"
+                  />
+                </PlayImageContainer>
+                Watch Prototype
+              </FeaturedWorkButton>
             )}
+
+            <FeaturedWorkButton
+              mobile
+              href={caseLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              bg={caseBg}
+            >
+              Read Case Study
+            </FeaturedWorkButton>
           </WorkContentFlex>
         </motion.span>
       </DisplayAtMedia>

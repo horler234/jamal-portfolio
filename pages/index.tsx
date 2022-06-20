@@ -184,7 +184,13 @@ const Home: NextPage = () => {
                 </ul>
               </AnimateSharedLayout>
 
-              <HireButton>Hire me</HireButton>
+              <HireButton
+                href="mailto:abdulqadiradebayo331@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire me
+              </HireButton>
 
               <HamburgerContainer>
                 <button name="show-navigation" onClick={() => setIsOpen(true)}>
@@ -269,9 +275,13 @@ const Home: NextPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", delay: 0.2 }}
               >
-                <Link href="/" passHref>
-                  <GreenButton>Hire me</GreenButton>
-                </Link>
+                <GreenButton
+                  href="mailto:abdulqadiradebayo331@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hire me
+                </GreenButton>
               </motion.span>
 
               <motion.span
@@ -279,9 +289,13 @@ const Home: NextPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", delay: 0.3 }}
               >
-                <Link href="/" passHref>
-                  <TransparentButton>View CV</TransparentButton>
-                </Link>
+                <TransparentButton
+                  href="https://docs.google.com/document/d/1M5BoHHzqdKMfQheoMs6QpfY7dDF-MnSi/edit?usp=drivesdk&ouid=106240438463745738776&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View CV
+                </TransparentButton>
               </motion.span>
             </div>
             <SkipButton onClick={() => router.push("#works")}>
@@ -356,9 +370,13 @@ const Home: NextPage = () => {
                 />
 
                 <DisplayAtMedia custom="(max-width: 1100px)">
-                  <Link href="/" passHref>
-                    <GreenButton>View CV</GreenButton>
-                  </Link>
+                  <GreenButton
+                    href="https://docs.google.com/document/d/1M5BoHHzqdKMfQheoMs6QpfY7dDF-MnSi/edit?usp=drivesdk&ouid=106240438463745738776&rtpof=true&sd=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View CV
+                  </GreenButton>
                 </DisplayAtMedia>
               </motion.span>
             </AboutImageContainer>
@@ -388,9 +406,13 @@ const Home: NextPage = () => {
               </p>
 
               <DisplayAtMedia custom="(min-width: 1101px)">
-                <Link href="/" passHref>
-                  <GreenButton>View CV</GreenButton>
-                </Link>
+                <GreenButton
+                  href="https://docs.google.com/document/d/1M5BoHHzqdKMfQheoMs6QpfY7dDF-MnSi/edit?usp=drivesdk&ouid=106240438463745738776&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View CV
+                </GreenButton>
               </DisplayAtMedia>
             </motion.div>
           </AboutSectionContainer>

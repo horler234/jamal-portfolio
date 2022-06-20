@@ -110,7 +110,7 @@ export const HamburgerContainer = styled.div`
   }
 `;
 
-export const HireButton = styled.button`
+export const HireButton = styled.a`
   cursor: pointer;
   width: 177px;
   height: 60px;
@@ -120,6 +120,10 @@ export const HireButton = styled.button`
   font-weight: 500;
   font-size: 24px;
   line-height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   color: #ffffff;
   font-family: inherit;
 
