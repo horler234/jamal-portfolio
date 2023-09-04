@@ -5,6 +5,6 @@ export type Work = {
   title: string;
   desc: string;
   caseLink?: string;
-  protoLink?: string;
+  siteLink?: string;
   imgSrc: string;
 };

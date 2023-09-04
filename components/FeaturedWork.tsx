@@ -166,9 +166,17 @@ export const FeaturedWork = ({ work }: IFeaturedWork) => {
         </div>
 
         <div>
-          <Link href={work.caseLink ?? work.protoLink ?? ""}>
-            <a>{work.caseLink ? "Read Case Study" : "View prototype"}</a>
-          </Link>
+          {work.caseLink && (
+            <Link href={work.caseLink}>
+              <a>Read Case Study</a>
+            </Link>
+          )}
+
+          {work.siteLink && (
+            <Link href={work.siteLink}>
+              <a>View Website</a>
+            </Link>
+          )}
         </div>
       </motion.div>
     </WorkContainer>
