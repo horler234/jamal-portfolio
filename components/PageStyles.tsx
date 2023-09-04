@@ -365,7 +365,7 @@ export const AboutImageContainer = styled.div`
       line-height: 22px;
       margin: 11px 0;
       color: #ffffff;
-      margin-left: 129px;
+      margin-left: 29px;
     }
 
     p {
@@ -373,21 +373,11 @@ export const AboutImageContainer = styled.div`
       font-size: 18px;
       line-height: 22px;
       color: rgba(255, 255, 255, 0.4);
-      margin-left: 129px;
+      margin-left: 29px;
     }
 
     > span:nth-child(2) > div:first-child {
-      margin-left: 129px;
-    }
-  }
-
-  @media (max-width: 1330px) {
-    > div {
-      h4,
-      p,
-      > span:nth-child(2) > div:first-child {
-        margin-left: 50px;
-      }
+      margin-left: 29px;
     }
   }
 

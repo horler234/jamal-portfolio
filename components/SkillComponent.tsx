@@ -158,16 +158,14 @@ export const SkillComponent = ({
   return (
     <>
       {index === 0 ? (
-        <Parallax rotate={[-20, 0]} translateY={[35, 0]} endScroll={-100}>
-          <SkillCard>
-            <div>
-              {icon}
-              {title}
-            </div>
+        <SkillCard>
+          <div>
+            {icon}
+            {title}
+          </div>
 
-            <p>{desc}</p>
-          </SkillCard>
-        </Parallax>
+          <p>{desc}</p>
+        </SkillCard>
       ) : index === 1 ? (
         <SkillCard>
           <div>
@@ -179,16 +177,14 @@ export const SkillComponent = ({
         </SkillCard>
       ) : (
         index === 2 && (
-          <Parallax rotate={[20, 0]} translateY={[35, 0]}>
-            <SkillCard>
-              <div>
-                {icon}
-                {title}
-              </div>
+          <SkillCard>
+            <div>
+              {icon}
+              {title}
+            </div>
 
-              <p>{desc}</p>
-            </SkillCard>
-          </Parallax>
+            <p>{desc}</p>
+          </SkillCard>
         )
       )}
       <motion.div

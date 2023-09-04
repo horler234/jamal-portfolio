@@ -345,7 +345,7 @@ const Home: NextPage = () => {
             ))}
           </WorksContainer>
 
-          <RandomContainer>
+          {/* <RandomContainer>
             <SectionHeader text="Some of my random UI Designs" />
 
             <RandomDesignsContent>
@@ -359,7 +359,7 @@ const Home: NextPage = () => {
                 />
               ))}
             </RandomDesignsContent>
-          </RandomContainer>
+          </RandomContainer> */}
 
           <AboutSectionContainer
             ref={(ref) => {
