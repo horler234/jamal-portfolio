@@ -407,7 +407,7 @@ const Home: NextPage = () => {
               <h1>About me</h1>
 
               <p>
-                Over the last two years, I&apos;ve been growing and honing my
+                Over the last three years, I&apos;ve been growing and honing my
                 skills as a UI/UX Designer with experience in designing and
                 building products in different sectors which serve as a solution
                 to various public problems.
