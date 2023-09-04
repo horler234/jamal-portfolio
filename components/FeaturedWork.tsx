@@ -111,6 +111,10 @@ export const WorkContainer = styled.div`
         margin-bottom: 32px;
       }
 
+      > div:nth-child(4) {
+        border-radius: 5px;
+      }
+
       > div:last-child a {
         font-size: 12px;
         padding-bottom: 5.5px;
