@@ -4,9 +4,11 @@ import { motion, useAnimation } from "framer-motion";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 const SkillCard = styled.div`
-  width: 380px;
+  max-width: 380px;
+  width: 100%;
   height: 204px;
   background: rgba(51, 40, 85, 0.3);
   padding: 23px 28px;
@@ -155,7 +157,18 @@ export const SkillComponent = ({
   }, [mobileControl, inMobileView]);
   return (
     <>
-      {index === 1 ? (
+      {index === 0 ? (
+        <Parallax rotate={[-20, 0]} translateY={[35, 0]} endScroll={-100}>
+          <SkillCard>
+            <div>
+              {icon}
+              {title}
+            </div>
+
+            <p>{desc}</p>
+          </SkillCard>
+        </Parallax>
+      ) : index === 1 ? (
         <SkillCard>
           <div>
             {icon}
@@ -165,21 +178,18 @@ export const SkillComponent = ({
           <p>{desc}</p>
         </SkillCard>
       ) : (
-        <motion.div
-          ref={index === 0 ? ref : rightRef}
-          variants={index === 0 ? leftVariant : rightVariant}
-          initial={index === 0 ? "hidden" : "rightHidden"}
-          animate={index === 0 ? control : rightControl}
-        >
-          <SkillCard>
-            <div>
-              {icon}
-              {title}
-            </div>
+        index === 2 && (
+          <Parallax rotate={[20, 0]} translateY={[35, 0]}>
+            <SkillCard>
+              <div>
+                {icon}
+                {title}
+              </div>
 
-            <p>{desc}</p>
-          </SkillCard>
-        </motion.div>
+              <p>{desc}</p>
+            </SkillCard>
+          </Parallax>
+        )
       )}
       <motion.div
         ref={mobileRef}

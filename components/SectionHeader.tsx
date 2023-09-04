@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export const SectionHeaderText = styled.h1`
   font-weight: 600;
@@ -10,6 +11,10 @@ export const SectionHeaderText = styled.h1`
   text-align: center;
   color: #ffffff;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 23px;
 
   @media (max-width: ${(props) => props.theme.media.mediaSizesString.tablet}) {
     font-size: 20px;
@@ -24,9 +29,10 @@ const variant = {
 
 interface ISectionHeader {
   text: string;
+  icon?: ReactNode;
 }
 
-export const SectionHeader = ({ text }: ISectionHeader) => {
+export const SectionHeader = ({ text, icon }: ISectionHeader) => {
   const control = useAnimation();
   const [ref, inView, entry] = useInView();
 
@@ -43,7 +49,10 @@ export const SectionHeader = ({ text }: ISectionHeader) => {
 
   return (
     <motion.div ref={ref} variants={variant} initial="hidden" animate={control}>
-      <SectionHeaderText>{text}</SectionHeaderText>
+      <SectionHeaderText>
+        {text}
+        {icon}
+      </SectionHeaderText>
     </motion.div>
   );
 };

@@ -49,7 +49,7 @@ const ContactFormContainer = styled.form`
     width: 100%;
     max-width: 525px;
     height: 60px;
-    background: #006d3f;
+    background: #6936fa;
     border-radius: 10px;
     border: transparent;
     font-weight: 500;

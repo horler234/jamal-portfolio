@@ -1,14 +1,10 @@
 import { ReactNode } from "react";
 
 export type Work = {
+  category: string;
   title: string;
-  icon: ReactNode;
-  iconBg?: string;
   desc: string;
-  caseBg?: string;
-  caseLink: string;
+  caseLink?: string;
   protoLink?: string;
   imgSrc: string;
-  imgWidth: number;
-  imgHeight: number;
 };

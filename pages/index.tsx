@@ -49,6 +49,8 @@ import { isAnyArrayBuffer } from "util/types";
 import { SectionSubHeader } from "@components/SectionSubHeader";
 import { ContactForm } from "@components/ContactForm";
 import { ContactInfo } from "@components/ContactInfo";
+import { NigeriaFlag } from "@components/icons/NigeriaFlag";
+import { Parallax } from "react-scroll-parallax";
 
 const links = [
   {
@@ -72,7 +74,7 @@ const aboutImgVariant = {
     scale: 1,
     transition: { duration: 0.5 },
   },
-  aboutImgHidden: { opacity: 0, x: "-100%", scale: 0 },
+  aboutImgHidden: { opacity: 0, x: -200, scale: 0 },
 };
 
 const aboutTextVariant = {
@@ -90,7 +92,7 @@ const Home: NextPage = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
 
@@ -173,8 +175,8 @@ const Home: NextPage = () => {
                             width: "12px",
                             height: "12px",
                             borderRadius: "50%",
-                            background: "#0BB7DD",
-                            bottom: -10,
+                            background: "#6936FA",
+                            bottom: -14,
                             // zIndex: 1,
                           }}
                         />
@@ -251,29 +253,46 @@ const Home: NextPage = () => {
               if (ref && scroll >= 0) setSection("/");
             }}
           >
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring" }}
             >
-              Hi, there! I’m Abdulqadir Adebayo, a UI/UX Designer from Nigeria.
-            </motion.h1>
-            <motion.p
+              Hi! I’m Abdulqadir. <NigeriaFlag />{" "}
+              <Image
+                src="/images/arm-emoji.png"
+                alt="Emoji"
+                width={12}
+                height={12}
+              />
+            </motion.div>
+            <motion.h1
               initial={{ opacity: 0, y: 200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", delay: 0.1 }}
             >
-              I have 2years of experience working as a UI/UX Designer within and
-              outside of my country. I help small and large scale businesses
-              solve their problems by building User centred products and trouble
-              shooting UX Problems, which in turn increases their
-              profit/revenue.
+              I’m a Product Designer, based in Lagos, Nigeria, with about 3
+              years of Experience.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 200 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", delay: 0.2 }}
+            >
+              I’m experienced in leading the design processes from start to
+              finish. From making user centered researches, design thinking
+              processes, creating wireframes, creating UI/UX designs to
+              Prototyping e.t.c. I have worked with different teams in building
+              products across diverse sectors in Finance, Legal sectors,
+              Education, Logistics, E-commerce and many more. I feel comfortable
+              using various methods and design tools in bringing ideas and
+              concepts to life.
             </motion.p>
             <div>
               <motion.span
                 initial={{ opacity: 0, y: 200 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ type: "spring", delay: 0.2 }}
+                transition={{ type: "spring", delay: 0.3 }}
               >
                 <GreenButton
                   href="mailto:abdulqadiradebayo331@gmail.com"
@@ -287,7 +306,7 @@ const Home: NextPage = () => {
               <motion.span
                 initial={{ opacity: 0, y: 200 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ type: "spring", delay: 0.3 }}
+                transition={{ type: "spring", delay: 0.4 }}
               >
                 <TransparentButton
                   href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
@@ -309,22 +328,20 @@ const Home: NextPage = () => {
             }}
             id="works"
           >
-            <SectionHeader text="Featured Works" />
+            <SectionHeader
+              text="Have a look at some of my works."
+              icon={
+                <Image
+                  src="/images/cool-emoji.png"
+                  alt="Emoji"
+                  width={46}
+                  height={46}
+                />
+              }
+            />
 
             {featuredWorks.map((work, i) => (
-              <FeaturedWork
-                key={i}
-                title={work.title}
-                desc={work.desc}
-                icon={work.icon}
-                imgSrc={work.imgSrc}
-                imgWidth={work.imgWidth}
-                imgHeight={work.imgHeight}
-                caseLink={work.caseLink}
-                protoLink={work.protoLink}
-                caseBg={work.caseBg}
-                iconBg={work.iconBg}
-              />
+              <FeaturedWork key={i} work={work} />
             ))}
           </WorksContainer>
 
@@ -351,34 +368,34 @@ const Home: NextPage = () => {
             id="about"
           >
             <AboutImageContainer>
-              <motion.span
-                ref={aboutImgRef}
-                style={{
-                  width: "100%",
-                  position: "relative",
-                  height: "100%",
-                }}
-                variants={aboutImgVariant}
-                initial="aboutImgHidden"
-                animate={aboutImgControl}
-              >
-                <Image
-                  src="/images/abdulqadir.png"
-                  width={441}
-                  height={500}
-                  alt="Abdulqadir"
-                />
+              <div>
+                <Parallax translateY={[-5, 5]}>
+                  <div />
+                </Parallax>
+                <span>
+                  <Parallax translateY={[5, -5]}>
+                    <Image
+                      src="/images/abdulqadir.png"
+                      width={441}
+                      height={500}
+                      alt="Abdulqadir"
+                    />
+                  </Parallax>
 
-                <DisplayAtMedia custom="(max-width: 1100px)">
-                  <GreenButton
-                    href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View CV
-                  </GreenButton>
-                </DisplayAtMedia>
-              </motion.span>
+                  <h4>Abdulqadir Adebayo</h4>
+                  <p>Product Designer</p>
+
+                  <DisplayAtMedia custom="(max-width: 1220px)">
+                    <GreenButton
+                      href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View CV
+                    </GreenButton>
+                  </DisplayAtMedia>
+                </span>
+              </div>
             </AboutImageContainer>
 
             <motion.div
@@ -405,7 +422,7 @@ const Home: NextPage = () => {
                 people.
               </p>
 
-              <DisplayAtMedia custom="(min-width: 1101px)">
+              <DisplayAtMedia custom="(min-width: 1221px)">
                 <GreenButton
                   href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
                   target="_blank"

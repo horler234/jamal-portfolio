@@ -92,11 +92,10 @@ export const TitleRing = styled.div<{ lightBg: string; darkBg: string }>`
 export const LinearLoader = styled.div<{ progress: number }>`
   position: relative;
   width: 100%;
-  height: 17px;
+  height: 20px;
   background: #a99ad2;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 12px;
   text-align: center;
   display: flex;
   align-items: center;

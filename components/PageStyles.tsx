@@ -16,7 +16,7 @@ export const NavigationContainer = styled.nav<{ bg: string }>`
 
 export const NavigationContent = styled.div`
   width: 86%;
-  max-width: 1150px;
+  max-width: 1312px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -38,7 +38,7 @@ export const NavigationContent = styled.div`
         text-decoration: none;
         font-weight: 400;
         font-size: 18px;
-        line-height: 28px;
+        line-height: 22px;
       }
     }
   }
@@ -57,7 +57,7 @@ export const NavigationContent = styled.div`
 `;
 
 export const LogoContainer = styled.div`
-  border-bottom: 3.35294px solid #006d3f;
+  border-bottom: 3.35294px solid #6936fa;
 
   a {
     font-weight: 500;
@@ -65,6 +65,7 @@ export const LogoContainer = styled.div`
     line-height: 40px;
     color: #fcfcfc;
     text-decoration: none;
+    font-family: "Laila", sans-serif;
   }
 
   @media (max-width: ${(props) => props.theme.media.mediaSizesString.tablet}) {
@@ -76,7 +77,7 @@ export const LogoContainer = styled.div`
 export const NavigationListItem = styled.li<{ isActive?: boolean }>`
   position: relative;
   a {
-    color: ${(props) => (props.isActive ? "#0BB7DD" : "#fff")};
+    color: ${(props) => (props.isActive ? "#6936FA" : "#fff")};
     transition: all 0.6s ease;
   }
 
@@ -114,12 +115,12 @@ export const HireButton = styled.a`
   cursor: pointer;
   width: 177px;
   height: 60px;
-  background: #006d3f;
+  background: #6936fa;
   border: transparent;
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: 500;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,36 +134,54 @@ export const HireButton = styled.a`
 `;
 
 export const PageHeader = styled.header`
-  width: 75%;
-  max-width: 849px;
+  width: 82.5%;
+  max-width: 1248px;
   margin: 0 auto;
   padding: 77px 0;
   text-align: center;
 
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    width: 201px;
+    height: 30px;
+    background: #6936fa;
+    border-radius: 3px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+
   h1 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 48px;
-    line-height: 74px;
+    line-height: 60px;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 25px;
+    margin: 40px 0 49px;
   }
 
   p {
     font-weight: 400;
     font-size: 18px;
-    line-height: 28px;
-    color: #ffffff;
+    line-height: 31px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 1067px;
+    margin: 0 auto;
   }
 
-  div {
+  > div:nth-child(4) {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px 0 62px;
   }
 
-  @media (max-width: ${(props) => props.theme.media.mediaSizesString.tablet}) {
+  @media (max-width: 767px) {
     h1 {
       font-size: 24px;
       line-height: 37px;
@@ -174,7 +193,7 @@ export const PageHeader = styled.header`
       line-height: 20px;
     }
 
-    div {
+    > div:nth-child(4) {
       flex-direction: column;
       margin: 31px 0 40px;
     }
@@ -184,11 +203,11 @@ export const PageHeader = styled.header`
 export const GreenButton = styled.a`
   width: 177px;
   height: 60px;
-  border-radius: 10px;
-  background: #006d3f;
+  border-radius: 5px;
+  background: #6936fa;
   font-weight: 500;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,7 +236,7 @@ export const SkipButton = styled.button<{ isUp?: boolean }>`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid #0bb7dd;
+  border: 1px solid #6936fa;
   background: transparent;
   animation: ${SkipBounce} 3s ease infinite;
 
@@ -229,8 +248,8 @@ export const SkipButton = styled.button<{ isUp?: boolean }>`
 
 export const WorksContainer = styled.section`
   padding: 77px 0 152px;
-  width: 75%;
-  max-width: 1150px;
+  width: 86%;
+  max-width: 1312px;
   margin: 0 auto;
 
   @media (max-width: 1300px) {
@@ -276,8 +295,8 @@ export const AboutSectionContainer = styled(WorksContainer)`
   padding: 134px 0 99px;
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1150px;
+  width: 86%;
+  max-width: 1312px;
 
   > div:last-child {
     width: 527px;
@@ -298,7 +317,7 @@ export const AboutSectionContainer = styled(WorksContainer)`
     }
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1220px) {
     flex-direction: column-reverse;
     text-align: center;
     /* max-width: 500px; */
@@ -314,6 +333,7 @@ export const AboutSectionContainer = styled(WorksContainer)`
 
   @media (max-width: ${(props) => props.theme.media.mediaSizesString.tablet}) {
     padding-top: 120px;
+
     div:last-child {
       h1 {
         margin-bottom: 19px;
@@ -331,9 +351,72 @@ export const AboutSectionContainer = styled(WorksContainer)`
 `;
 
 export const AboutImageContainer = styled.div`
+  > div {
+    > div:first-child {
+      width: 292px;
+      height: 86px;
+      background: #6936fa;
+      margin-bottom: -43px;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 11px 0;
+      color: #ffffff;
+      margin-left: 129px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-left: 129px;
+    }
+
+    > span:nth-child(2) > div:first-child {
+      margin-left: 129px;
+    }
+  }
+
+  @media (max-width: 1330px) {
+    > div {
+      h4,
+      p,
+      > span:nth-child(2) > div:first-child {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 1220px) {
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > div:first-child {
+        margin-left: -250px;
+      }
+
+      h4,
+      p,
+      > span:nth-child(2) > div:first-child {
+        margin-left: 0;
+      }
+    }
+  }
   @media (max-width: ${(props) => props.theme.media.mediaSizesString.tablet}) {
     max-width: 269px;
     margin: 0 auto;
+
+    > div > div:first-child {
+      width: 200px;
+      height: 66px;
+      margin-left: -97px;
+    }
   }
 `;
 

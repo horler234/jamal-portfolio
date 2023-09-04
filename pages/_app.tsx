@@ -4,6 +4,7 @@ import { AppTheme } from "@theme/AppTheme";
 import { NextComponentType, NextPageContext } from "next";
 import { useRouter } from "next/router";
 import { Gradient } from "@keyframes/Gradient";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 /**
  * Custom Next.js App
@@ -36,7 +37,7 @@ const GlobalStyle = createGlobalStyle<ThemeWrapper>`
   html, body {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Laila', sans-serif;
+    font-family: 'Encode Sans', sans-serif;
     scroll-behavior: smooth;
   }
 
@@ -61,8 +62,10 @@ interface MyAppProps extends App {
 const MyApp = ({ Component, pageProps }: MyAppProps) => {
   return (
     <ThemeProvider theme={AppTheme}>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ParallaxProvider>
     </ThemeProvider>
   );
 };

@@ -52,7 +52,7 @@ export default class MyDocument extends Document<any> {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700&family=Laila:wght@400;500;600;700&display=swap"
             rel="stylesheet"
           />
           <link
