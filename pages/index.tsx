@@ -309,7 +309,7 @@ const Home: NextPage = () => {
                 transition={{ type: "spring", delay: 0.4 }}
               >
                 <TransparentButton
-                  href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
+                  href="https://drive.google.com/file/d/1UfechEQVNo3AD8e2LQT-l7NvcOuueEYv/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -387,7 +387,7 @@ const Home: NextPage = () => {
 
                   <DisplayAtMedia custom="(max-width: 1220px)">
                     <GreenButton
-                      href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
+                      href="https://drive.google.com/file/d/1UfechEQVNo3AD8e2LQT-l7NvcOuueEYv/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -424,7 +424,7 @@ const Home: NextPage = () => {
 
               <DisplayAtMedia custom="(min-width: 1221px)">
                 <GreenButton
-                  href="https://drive.google.com/file/d/1MCOkOtFoyYK_bnESeSzS8Xa-eBRytin5/view?usp=drivesdk"
+                  href="https://drive.google.com/file/d/1UfechEQVNo3AD8e2LQT-l7NvcOuueEYv/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
