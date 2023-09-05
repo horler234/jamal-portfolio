@@ -12,7 +12,7 @@ export const featuredWorks: Work[] = [
     desc: "This is a mobile application that helps users locate spaces for personal or cooperate use. Users can use the mobile application to locate work spaces, spaces for bootcamps, meetings, seminars e.t.c",
     imgSrc: "/images/you-work.png",
     caseLink:
-      "https://drive.google.com/file/d/1Lj0wex8iHPI8PoodByUHwozPuaaGEHV3/view?usp=drivesdk",
+      "https://medium.com/@abdulqadiradebayo/youwork-mobile-app-design-a-ui-ux-case-study-19b4ad3840bd",
   },
   {
     category: "EdTech",
@@ -20,7 +20,7 @@ export const featuredWorks: Work[] = [
     desc: "Bolts is an educational website for Students of Civil Engineering, University of Lagos. The website is intended to promote both the academic and social activities of the students in the department.",
     imgSrc: "/images/bolts.png",
     caseLink:
-      "https://drive.google.com/file/d/1Lj0wex8iHPI8PoodByUHwozPuaaGEHV3/view?usp=drivesdk",
+      "https://medium.com/@abdulqadiradebayo/bolts-website-design-a-ux-case-study-d58a8086053a",
   },
   {
     category: "PropertyTech",
@@ -35,7 +35,6 @@ export const featuredWorks: Work[] = [
     title: "RentiChat",
     desc: "This is a Design System for Rentichat- a platform that helps students in search of apartments/private hostels secure accommodations off the campus seamlessly. Asides this, Rentichat also has a feature that provides its users with competent and experienced Artisans to help with household tasks upon request.",
     imgSrc: "/images/rentichat.png",
-    caseLink:
-      "https://drive.google.com/file/d/1Lj0wex8iHPI8PoodByUHwozPuaaGEHV3/view?usp=drivesdk",
+    caseLink: "https://www.behance.net/gallery/179239327/DESIGN-SYSTEM",
   },
 ];
